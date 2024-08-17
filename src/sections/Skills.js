@@ -1,5 +1,5 @@
 function Skills(){
-    return <>
+    return <section id="skills">
         <div id="section-icon">Skills</div>
         <h1 id="skills-title">My <span>Advantages</span></h1>
         <div id="skills-wrapper">
@@ -18,7 +18,7 @@ function Skills(){
             <div id="tool">Github</div>
             <div id="tool">Figma</div>
         </div>
-    </>   
+    </section>   
 }
 
 export default Skills

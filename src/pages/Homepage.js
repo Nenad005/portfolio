@@ -8,14 +8,16 @@ import Services from "../sections/Services";
 import Skills from "../sections/Skills";
 
 export default function Homepage(){
-    return <>
+    return <div id="homepage" className="flex h-screen bg-background">
         <Profile></Profile>
-        <Intro></Intro>
-        <About></About>
-        <Resume></Resume>
-        <Services></Services>
-        <Skills></Skills>
-        <Projects></Projects>
-        <Contact></Contact>
-    </>
+        <div id="homepage-sections" className="flex flex-col gap-4 h-screen px-[20px] overflow-scroll overflow-x-hidden">
+            <Intro></Intro>
+            <About></About>
+            <Resume></Resume>
+            <Services></Services>
+            <Skills></Skills>
+            <Projects></Projects>
+            <Contact></Contact>
+        </div>
+    </div>
 }

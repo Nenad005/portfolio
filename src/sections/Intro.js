@@ -1,5 +1,5 @@
 function Intro(){
-    return <>
+    return <section id="introduction">
         <div id="section-icon">Introduction</div>
         <h1 id="intro-title">Hello there! I'm <span>Marko Nenadovic</span>, a Full-Stact developer</h1>
         <h2 id="intro-subtitle">I design and code beautifully simple things and i love what i do. Just simple like that!</h2>
@@ -14,7 +14,7 @@ function Intro(){
                 <h2 id="intro-counter-title">PROJECTS COMPLETED</h2>
             </div>
         </div>
-    </>   
+    </section>   
 }
 
 export default Intro
