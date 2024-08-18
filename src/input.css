@@ -13,7 +13,7 @@
       @apply text-base text-secondary;
     }
     .action-button {
-      @apply bg-accent text-background h-12 w-[45%] flex justify-center 
+      @apply bg-accent text-background h-12 w-[47%] flex justify-center 
                items-center rounded-3xl hover:bg-background hover:text-accent
                border-solid border-2 border-accent cursor-pointer transition-all duration-200 ease-in;
     }

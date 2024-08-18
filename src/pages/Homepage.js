@@ -8,7 +8,7 @@ import Services from "../sections/Services";
 import Skills from "../sections/Skills";
 
 export default function Homepage(){
-    return <div id="homepage" className="flex h-screen bg-background">
+    return <div id="homepage" className="flex flex-col bg-background">
         <Profile></Profile>
         <div id="homepage-sections" className="flex flex-col gap-4 h-screen px-[20px] overflow-scroll overflow-x-hidden">
             <Intro></Intro>
