@@ -10,7 +10,7 @@ import Skills from "../sections/Skills";
 export default function Homepage(){
     return <div id="homepage" className="flex flex-col bg-background">
         <Profile></Profile>
-        <div id="homepage-sections" className="flex flex-col gap-4 h-screen px-[20px] overflow-scroll overflow-x-hidden">
+        <div id="homepage-sections" className="flex flex-col gap-4 px-[20px]">
             <Intro></Intro>
             <About></About>
             <Resume></Resume>

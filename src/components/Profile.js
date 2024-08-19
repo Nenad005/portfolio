@@ -1,5 +1,5 @@
-import { faCopyright, faEnvelope, faSadCry } from '@fortawesome/free-regular-svg-icons'
-import { faC, faLocation, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+import { faFile, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Profile(){
@@ -28,8 +28,14 @@ function Profile(){
                 <a id="profile-link">whatsapp</a>
             </div>
             <div id="profile-actions" className="w-[300px] flex justify-between">
-                <a id="profile-action" className='action-button'>HIRE ME</a>
-                <a id="profile-action" className='action-button'>RESUME</a>
+                <a id="profile-action" className='action-button group'>
+                    <FontAwesomeIcon icon={faEnvelope} className='mr-2 [&>*]:text-black group-hover:[&>*]:text-accent
+                                                                  transition-all duration-200 ease-linear'/>
+                                                                  HIRE ME</a>
+                <a id="profile-action" className='action-button group'>
+                    <FontAwesomeIcon icon={faFile} className='mr-2 [&>*]:text-black group-hover:[&>*]:text-accent
+                                                                  transition-all duration-200 ease-linear'/>
+                    RESUME</a>
             </div>
         </div>
     </>   

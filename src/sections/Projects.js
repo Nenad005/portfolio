@@ -1,6 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faIdCard } from '@fortawesome/free-solid-svg-icons'
+
 function Projects(){
     return <section id="projects">
-        <div id="section-icon">Projects</div>
+        <h2 id="section-icon"><FontAwesomeIcon icon={faIdCard}/>PROJECTS</h2>
         <h1 id="projects-title">Featured <span>Projects</span></h1>
         <div id="projects-wrapper">
             <div id="project important"></div>

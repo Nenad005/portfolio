@@ -1,6 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faShapes } from '@fortawesome/free-solid-svg-icons'
+
 function Skills(){
     return <section id="skills">
-        <div id="section-icon">Skills</div>
+        <div id="section-icon"><FontAwesomeIcon icon={faShapes}/>SKILLS</div>
         <h1 id="skills-title">My <span>Advantages</span></h1>
         <div id="skills-wrapper">
             <div id="skill">React</div>

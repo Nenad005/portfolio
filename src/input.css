@@ -4,10 +4,10 @@
 
 @layer components {
     .title {
-      @apply text-4xl font-semibold text-primary;
+      @apply text-2xl font-light text-primary;
     }
     .subtitle {
-      @apply text-2xl font-semibold text-primary;
+      @apply text-base font-light text-secondary;
     }
     .paragraph {
       @apply text-base text-secondary;
@@ -17,9 +17,32 @@
                items-center rounded-3xl hover:bg-background hover:text-accent
                border-solid border-2 border-accent cursor-pointer transition-all duration-200 ease-in;
     }
+    .big-title{
+      @apply text-[50px] leading-[80px] text-primary font-light
+    }
+
+    h1{
+      @apply big-title
+    }
+
+    span{
+      @apply text-accent
+    }
+
+    #section-icon{
+      @apply my-20 flex [&>svg]:mr-2 [&>svg>path]:text-primary
+             border-solid border-secondary rounded-3xl
+             border-[1px] py-2 px-5 justify-center items-center
+             w-fit
+    }
+
+    code{
+      @apply text-secondary -translate-y-[3px] px-[6px]
+    }
   }
 
 *{
     color: white;
     font-family: sans-serif;
+    font-weight: 400;
 }
