@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "text",
+      "required": false
+    },
+    "Begining": {
+      "type": "date",
+      "required": true
+    },
+    "End": {
+      "type": "date"
+    },
+    "ShortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "URL": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "Location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    }
+  }
+}
