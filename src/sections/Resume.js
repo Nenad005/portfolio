@@ -28,7 +28,7 @@ function Resume(){
     if (loading) return <h1>Loading ...</h1>
     if (error) return <h1>Error ...</h1>
 
-    console.log(data.experiences.data)
+    // console.log(data.experiences.data)
 
     return <section id="resume">
         <div id="section-icon"><FontAwesomeIcon icon={faFile}/>RESUME</div>

@@ -1,0 +1,1 @@
+export const backendUri = 'http://192.168.0.28:1337'

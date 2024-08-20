@@ -598,6 +598,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+svg>path {
+  fill: #28e98c;
+}
+
 h1 {
   font-size: 50px;
   font-weight: 300;
@@ -655,6 +659,14 @@ code {
   margin-bottom: 2.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .mb-7 {
   margin-bottom: 1.75rem;
 }
@@ -671,12 +683,8 @@ code {
   margin-top: 2.5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .block {
@@ -687,52 +695,60 @@ code {
   display: flex;
 }
 
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-\[3px\] {
-  height: 3px;
-}
-
-.h-\[6px\] {
-  height: 6px;
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-\[10px\] {
   height: 10px;
 }
 
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-\[10px\] {
+  width: 10px;
+}
+
 .w-\[200px\] {
   width: 200px;
-}
-
-.w-\[300px\] {
-  width: 300px;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .w-\[2px\] {
   width: 2px;
 }
 
-.w-\[3px\] {
-  width: 3px;
+.w-\[300px\] {
+  width: 300px;
 }
 
-.w-\[6px\] {
-  width: 6px;
+.w-\[70px\] {
+  width: 70px;
 }
 
-.w-\[10px\] {
-  width: 10px;
+.w-fit {
+  width: fit-content;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .grow {
@@ -745,6 +761,10 @@ code {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-end {
@@ -767,8 +787,16 @@ code {
   justify-content: space-between;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .gap-\[40px\] {
@@ -779,10 +807,6 @@ code {
   border-radius: 1.5rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-\[50\%\] {
   border-radius: 50%;
 }
@@ -791,8 +815,17 @@ code {
   border-width: 1px;
 }
 
+.border-\[1px\] {
+  border-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
+}
+
+.border-\[\#626262\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(98 98 98 / var(--tw-border-opacity));
 }
 
 .border-borderColor {
@@ -805,14 +838,14 @@ code {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(153 153 153 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .p-5 {
@@ -824,14 +857,14 @@ code {
   padding-right: 1rem;
 }
 
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .py-7 {
@@ -842,6 +875,15 @@ code {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .text-accent {
@@ -882,19 +924,16 @@ code {
   text-decoration-line: underline;
 }
 
-.\[\&\>\*\]\:text-black>* {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+.\[\&\>\*\]\:fill-black>* {
+  fill: #000;
 }
 
-.\[\&\>\*\]\:text-secondary>* {
-  --tw-text-opacity: 1;
-  color: rgb(153 153 153 / var(--tw-text-opacity));
+.\[\&\>\*\]\:fill-secondary>* {
+  fill: #999999;
 }
 
-.group:hover .group-hover\:\[\&\>\*\]\:text-accent>* {
-  --tw-text-opacity: 1;
-  color: rgb(40 233 140 / var(--tw-text-opacity));
+.group:hover .group-hover\:\[\&\>\*\]\:fill-accent>* {
+  fill: #28e98c;
 }
 
 .\[\&\>div\]\:w-\[100px\]>div {

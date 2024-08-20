@@ -21,6 +21,10 @@
       @apply text-[50px] leading-[80px] text-primary font-light
     }
 
+    svg {
+      @apply [&>path]:fill-accent 
+    }
+
     h1{
       @apply big-title
     }

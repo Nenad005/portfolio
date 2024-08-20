@@ -856,6 +856,41 @@ export interface ApiExperienceExperience extends Schema.CollectionType {
   };
 }
 
+export interface ApiProjectProject extends Schema.CollectionType {
+  collectionName: 'projects';
+  info: {
+    singularName: 'project';
+    pluralName: 'projects';
+    displayName: 'Project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.Text;
+    Technologies: Attribute.String & Attribute.Required;
+    GithubUrl: Attribute.String;
+    Url: Attribute.String;
+    Image: Attribute.Media<'images'> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSpecializationSpecialization extends Schema.CollectionType {
   collectionName: 'specializations';
   info: {
@@ -888,6 +923,38 @@ export interface ApiSpecializationSpecialization extends Schema.CollectionType {
   };
 }
 
+export interface ApiTechnologyTechnology extends Schema.CollectionType {
+  collectionName: 'technologies';
+  info: {
+    singularName: 'technology';
+    pluralName: 'technologies';
+    displayName: 'Technology';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String & Attribute.Required;
+    Image: Attribute.Media<'images'> & Attribute.Required;
+    tool: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::technology.technology',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::technology.technology',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -908,7 +975,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::counter.counter': ApiCounterCounter;
       'api::experience.experience': ApiExperienceExperience;
+      'api::project.project': ApiProjectProject;
       'api::specialization.specialization': ApiSpecializationSpecialization;
+      'api::technology.technology': ApiTechnologyTechnology;
     }
   }
 }

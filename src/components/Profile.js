@@ -17,7 +17,7 @@ function Profile(){
             <a id="profile-mail" href="mailto:markonenadovic2005@gmail.com" className='hover:underline transition-all duration-200 ease-in'><FontAwesomeIcon icon={faEnvelope} className='mr-2'/>markonenadovic2005@gmail.com</a>
             <a id="profile-location" href='https://maps.app.goo.gl/Hzbu8gQrXW11kdjq7' target='_blank' className='mb-7 hover:underline'><FontAwesomeIcon icon={faLocationDot} className='mr-2'/>Based in Belgrade, Serbia</a>
             <div id="profile-licence" className='flex justify-center items-center mb-7'>
-                <FontAwesomeIcon icon={faCopyright} className='[&>*]:text-secondary mr-2'></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faCopyright} className='[&>*]:fill-secondary mr-2'></FontAwesomeIcon>
                 <p id="licence-text" className='text-secondary text-sm'>2024 Marko Nenadovic, All Rights Reserved</p>
             </div>
             <div id="profile-links" className='mb-10'>
@@ -29,11 +29,11 @@ function Profile(){
             </div>
             <div id="profile-actions" className="w-[300px] flex justify-between">
                 <a id="profile-action" className='action-button group'>
-                    <FontAwesomeIcon icon={faEnvelope} className='mr-2 [&>*]:text-black group-hover:[&>*]:text-accent
+                    <FontAwesomeIcon icon={faEnvelope} className='mr-2 [&>*]:fill-black group-hover:[&>*]:fill-accent
                                                                   transition-all duration-200 ease-linear'/>
                                                                   HIRE ME</a>
                 <a id="profile-action" className='action-button group'>
-                    <FontAwesomeIcon icon={faFile} className='mr-2 [&>*]:text-black group-hover:[&>*]:text-accent
+                    <FontAwesomeIcon icon={faFile} className='mr-2 [&>*]:fill-black group-hover:[&>*]:fill-accent
                                                                   transition-all duration-200 ease-linear'/>
                     RESUME</a>
             </div>
