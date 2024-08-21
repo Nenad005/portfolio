@@ -20,7 +20,7 @@ function Intro(){
     if (loading) return <h1>Loading</h1>
     if (error) return <h1>Error</h1>
 
-    // console.log(data.counters.data)
+    // console.log(data.counters.data) 
 
     return <section id="introduction">
         <div id="section-icon" className="mb-20"><FontAwesomeIcon icon={faHome}/> INTRODUCTION</div>
