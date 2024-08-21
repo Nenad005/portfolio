@@ -22,7 +22,7 @@
     }
 
     svg {
-      @apply [&>path]:fill-accent 
+      @apply [&>path]:fill-accent
     }
 
     h1{
@@ -34,14 +34,42 @@
     }
 
     #section-icon{
-      @apply my-20 flex [&>svg]:mr-2 [&>svg>path]:text-primary
-             border-solid border-secondary rounded-3xl
+      @apply mt-20 mb-7 flex [&>svg]:mr-2 [&>svg>path]:fill-primary
+             border-solid border-borderColor rounded-3xl
              border-[1px] py-2 px-5 justify-center items-center
-             w-fit
+             w-fit text-xs
     }
 
     code{
       @apply text-secondary -translate-y-[3px] px-[6px]
+    }
+
+    #contact-box{
+      @apply flex flex-col 
+    }
+
+    input, textarea{
+      @apply bg-background focus:outline-none py-2 text-lg
+    }
+
+    label {
+      @apply mt-5
+    }
+
+    textarea{
+      @apply mb-10 border-b border-b-borderColor border-b
+    }
+
+    .input-error{
+      @apply text-red-500
+    }
+
+    .error{
+      @apply text-sm text-red-500 mt-[20px] ml-2
+    }
+
+    input, textarea{
+      @apply rounded-3xl pl-4
     }
   }
 

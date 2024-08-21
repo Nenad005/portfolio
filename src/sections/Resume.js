@@ -33,8 +33,8 @@ function Resume(){
     return <section id="resume">
         <div id="section-icon"><FontAwesomeIcon icon={faFile}/>RESUME</div>
         <h1 id="resume-title">Education & <span>Experience</span></h1>
-        <div id="resume-wrapper">
-            {data.experiences.data.map((experience) => {
+        <div id="resume-wrapper" className="mt-10">
+            {data.experiences.data.map((experience, index) => {
                 let attributes = experience.attributes
                 let beginingDateArr = attributes.Begining ? attributes.Begining.split('-') : null
                 let beginingDate = beginingDateArr ? {
@@ -53,7 +53,7 @@ function Resume(){
                 let endDateStr = endDate ? `${endDate.month} ${endDate.year}` : 'Present'
                 let shortDescStr = attributes.ShortDescription.replace(',', '<code>.</code>')
                 
-                return <div id="resume-task" className=" flex flex-row gap-[40px]">
+                return <div key={index} id="resume-task" className=" flex flex-row gap-[40px]">
                     <div className="flex flex-col justify-center items-center block">
                         <div className="bg-secondary w-[10px] h-[10px] rounded-[50%]"></div>
                         <div className="bg-secondary w-[2px] h-full"></div>

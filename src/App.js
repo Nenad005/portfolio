@@ -3,7 +3,9 @@ import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    <Homepage></Homepage>
+    <div id="root" className="bg-background">
+      <Homepage></Homepage>
+    </div>
   );
 }
 

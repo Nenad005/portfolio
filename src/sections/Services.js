@@ -34,7 +34,7 @@ function Icon({ url }) {
     }, [url]);
   
     return (
-      <div className="w-7 h-7"
+      <div className="w-7 h-7 [&>svg]:w-full [&>svg]:h-full [&>svg]:mb-2"
         dangerouslySetInnerHTML={{ __html: svgContent }}
         // style={{ fill: '#999999' }}
       />
@@ -48,12 +48,12 @@ function Services(){
 
     return <section id="services">
         <div id="section-icon"><FontAwesomeIcon icon={faGears}/> SERVICES</div>
-        <h1 id="services-title">My <span>Specializations</span></h1>
-        <div id="services-wrapper" className="flex flex-col gap-3">
-            {data.specializations.data.map((specialization) => {
+        <h1 id="services-title">My <span>Services</span></h1>
+        <div id="services-wrapper" className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-3 mt-10 ">
+            {data.specializations.data.map((specialization, index) => {
                 let attributes = specialization.attributes 
-                return <div id="service" className="flex flex-col border-solid border-[#626262] border-[1px] rounded-3xl px-7 py-7">
-                    <div className="flex justify-between items-center">
+                return <div key={index} id="service" className="flex flex-col border-solid border-[#626262] border-[1px] rounded-3xl px-7 py-7">
+                    <div className="flex justify-between items-center h-fit">
                         <h2 className="title text-xl mb-2">{attributes.Title}</h2>
                         <Icon url={`${backendUri}${attributes.Icon.data.attributes.url}`}></Icon>
                     </div>

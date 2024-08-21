@@ -23,14 +23,14 @@ function Intro(){
     // console.log(data.counters.data)
 
     return <section id="introduction">
-        <div id="section-icon"><FontAwesomeIcon icon={faHome}/> INTRODUCTION</div>
+        <div id="section-icon" className="mb-20"><FontAwesomeIcon icon={faHome}/> INTRODUCTION</div>
         <h1 id="intro-title" className="big-title" >Hello there! I'm <span>Marko Nenadovic</span>, a Full-Stact developer</h1>
-        <h2 id="intro-subtitle" className="subtitle">I design and code beautifully simple things and i love what i do. Just simple like that!</h2>
+        <h2 id="intro-subtitle" className="subtitle mt-5">I design and code beautifully simple things and i love what i do. Just simple like that!</h2>
         <a id="intro-projects-link"></a>
         <div id="intro-counters" className="flex [&>div]:w-[100px] w-full justify-between px-4">
-            {data.counters.data.map((counter) => {
+            {data.counters.data.map((counter, index) => {
                 let attributes = counter.attributes
-                return <div id="intro-counter-expreience">
+                return <div key={index} id="intro-counter-expreience" className="mt-20">
                     <h1 id="intro-counter-number" className="text-accent">{attributes.Count}+</h1>
                     <h2 id="intro-counter-title" className="subtitle">{attributes.Description}</h2>
                 </div>
