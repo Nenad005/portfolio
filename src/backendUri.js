@@ -1,1 +1,1 @@
-export const backendUri = 'http://192.168.0.28:1337'
+export const backendUri = 'http://vs.sveti-sava.edu.rs:1337/'
