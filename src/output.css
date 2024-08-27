@@ -643,6 +643,32 @@ span {
   margin-right: 0.5rem;
 }
 
+#profile-link {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(98 98 98 / var(--tw-border-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+#profile-link:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(40 233 140 / var(--tw-border-opacity));
+}
+
+#profile-link>svg {
+  height: 50%;
+  width: 50%;
+}
+
 code {
   --tw-translate-y: -3px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -725,8 +751,16 @@ input, textarea {
   top: 15px;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .m-\[12px_12px_12px_12px\] {
   margin: 12px 12px 12px 12px;
+}
+
+.m-7 {
+  margin: 1.75rem;
 }
 
 .mx-auto {
@@ -736,6 +770,10 @@ input, textarea {
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
 }
 
 .mb-2 {
@@ -778,8 +816,20 @@ input, textarea {
   margin-top: 5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
 }
 
 .block {
@@ -858,12 +908,40 @@ input, textarea {
   width: 100%;
 }
 
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
+.max-w-\[1500px\] {
+  max-width: 1500px;
+}
+
 .grow {
   flex-grow: 1;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-none {
+  cursor: none;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-cols-\[repeat\(auto-fit\2c _minmax\(300px\2c _1fr\)\)\] {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -906,12 +984,20 @@ input, textarea {
   justify-content: space-between;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-7 {
@@ -922,12 +1008,36 @@ input, textarea {
   gap: 40px;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-y-16 {
+  row-gap: 4rem;
+}
+
+.gap-y-12 {
+  row-gap: 3rem;
+}
+
+.gap-x-10 {
+  column-gap: 2.5rem;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
 
 .rounded-\[50\%\] {
   border-radius: 50%;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border {
@@ -1010,9 +1120,12 @@ input, textarea {
   padding-bottom: 1.75rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.pt-7 {
+  padding-top: 1.75rem;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
 }
 
 .text-sm {
@@ -1063,6 +1176,10 @@ input, textarea {
   transition-duration: 200ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -1075,6 +1192,13 @@ input, textarea {
   color: white;
   font-family: sans-serif;
   font-weight: 400;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.hover\:border-accent:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(40 233 140 / var(--tw-border-opacity));
 }
 
 .hover\:underline:hover {
@@ -1086,18 +1210,54 @@ input, textarea {
   background-color: rgb(31 31 31 / var(--tw-bg-opacity));
 }
 
+.group:hover .group-hover\:bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 233 140 / var(--tw-bg-opacity));
+}
+
 .group\/proj:hover .group-hover\/proj\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(40 233 140 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
   .md\:w-\[700px\] {
     width: 700px;
   }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:gap-x-10 {
+    column-gap: 2.5rem;
+  }
 }
 
 @media (min-width: 1280px) {
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .xl\:h-screen {
     height: 100vh;
   }
@@ -1106,28 +1266,16 @@ input, textarea {
     width: 100%;
   }
 
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .xl\:flex-row {
     flex-direction: row;
   }
 
   .xl\:overflow-y-scroll {
     overflow-y: scroll;
-  }
-
-  .xl\:pl-10 {
-    padding-left: 2.5rem;
-  }
-
-  .xl\:pl-32 {
-    padding-left: 8rem;
-  }
-
-  .xl\:pl-24 {
-    padding-left: 6rem;
-  }
-
-  .xl\:pl-20 {
-    padding-left: 5rem;
   }
 
   .xl\:pl-16 {
@@ -1153,6 +1301,10 @@ input, textarea {
 
 .\[\&\>path\]\:fill-black>path {
   fill: #000;
+}
+
+.\[\&\>path\]\:fill-secondary>path {
+  fill: #999999;
 }
 
 .group:hover .group-hover\:\[\&\>path\]\:fill-accent>path {

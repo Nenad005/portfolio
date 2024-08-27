@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+
     .title {
       @apply text-2xl font-light text-primary;
     }
@@ -38,6 +39,12 @@
              border-solid border-borderColor rounded-3xl
              border-[1px] py-2 px-5 justify-center items-center
              w-fit text-xs
+    }
+
+    #profile-link{
+      @apply border-solid border-borderColor border-2 rounded-full
+             w-[50px] h-[50px] [&>svg]:w-[50%] [&>svg]:h-[50%] flex justify-center items-center 
+             hover:border-accent transition-all duration-300
     }
 
     code{
@@ -77,4 +84,6 @@
     color: white;
     font-family: sans-serif;
     font-weight: 400;
+    transition: all;
+    transition-duration: 300ms;
 }

@@ -27,7 +27,7 @@ function Intro(){
         <h1 id="intro-title" className="big-title" >Hello there! I'm <span>Marko Nenadovic</span>, a Full-Stact developer</h1>
         <h2 id="intro-subtitle" className="subtitle mt-5">I design and code beautifully simple things and i love what i do. Just simple like that!</h2>
         <a id="intro-projects-link"></a>
-        <div id="intro-counters" className="flex [&>div]:w-[100px] w-full justify-between px-4">
+        <div id="intro-counters" className="flex [&>div]:w-[100px] w-fit justify-between px-4 gap-5">
             {data.counters.data.map((counter, index) => {
                 let attributes = counter.attributes
                 return <div key={index} id="intro-counter-expreience" className="mt-20">
