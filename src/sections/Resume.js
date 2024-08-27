@@ -84,7 +84,7 @@ function Resume(){
                     month : beginingDateArr[1],
                     day : beginingDateArr[2]
                 } : null
-                let beginingDateStr = beginingDate ? `${monthToStr(beginingDate.month)} ${beginingDate.year}` : 'Present'
+                let beginingDateStr = beginingDate ? `${monthToStr(beginingDate.month).toLowerCase()} ${beginingDate.year}` : 'Present'
 
                 let endDateArr = attributes.End ? attributes.End.split('-') : null
                 let endDate = endDateArr ? {
@@ -92,7 +92,7 @@ function Resume(){
                     month : endDateArr[1],
                     day : endDateArr[2]
                 } : null
-                let endDateStr = endDate ? `${monthToStr(endDate.month)} ${endDate.year}` : 'Present'
+                let endDateStr = endDate ? `${monthToStr(endDate.month).toLowerCase()} ${endDate.year}` : 'Present'
                 let shortDescStr = attributes.ShortDescription.replace(',', '<code>.</code>')
                 // console.log(attributes.Location)
                 

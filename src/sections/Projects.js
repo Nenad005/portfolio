@@ -63,7 +63,7 @@ function Projects(){
                     <h2 className="subtitle mt-3">{attributes.Description}</h2>
                 </div>
             })}
-            <div id="project important"></div>
+            {/* <div id="project important"></div> */}
         </div>
         <a id="projects-github-plug" target="_blank" href="https://github.com/Nenad005" className="text-[24px] cursor-pointer hover:underline text-accent mt-10">Dive deeper into my diverse projects on GitHub <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
 
