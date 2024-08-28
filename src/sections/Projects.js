@@ -14,6 +14,7 @@ const GET_DATA = gql`
                     Technologies
                     Featured
                     GithubUrl
+                    Importance
                     Url
                     Image{
                         data{
@@ -34,11 +35,23 @@ function Projects(){
     if (loading) return <h1>Loading ...</h1>
     if (error) return <h1>Error ...</h1>
 
+    let sortedData = [...data.projects.data].sort((a,b) => {
+        let importanceA = a.attributes.Importance
+        let importanceB = b.attributes.Importance
+        let featuredA = a.attributes.Featured
+        let featuredB = b.attributes.Featured
+        importanceA = importanceA ? (featuredA ? importanceA : importanceA + 20) : 100
+        importanceB = importanceB ? (featuredB ? importanceB : importanceB + 20) : 100
+
+        // console.log(a.attributes.Title+importanceA, b.attributes.Title+importanceB)
+        return importanceA - importanceB
+    })
+
     return <section id="projects">
         <h2 id="section-icon"><FontAwesomeIcon icon={faIdCard}/>PROJECTS</h2>
         <h1 id="projects-title">Featured <span>Projects</span></h1>
         <div id="projects-wrapper" className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-x-10 gap-y-12 max-w-[1500px]">
-            {data.projects.data.map((project, index) => {
+            {sortedData.map((project, index) => {
                 let attributes = project.attributes
                 let technologies = attributes.Technologies.split(',')
                 // console.log(technologies)
@@ -65,7 +78,7 @@ function Projects(){
             })}
             {/* <div id="project important"></div> */}
         </div>
-        <a id="projects-github-plug" target="_blank" href="https://github.com/Nenad005" className="text-[24px] cursor-pointer hover:underline text-accent mt-10">Dive deeper into my diverse projects on GitHub <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
+        <a id="projects-github-plug" target="_blank" href="https://github.com/Nenad005" className="text-[24px] block  mt-10 cursor-pointer hover:underline text-accent mt-10">Dive deeper into my diverse projects on GitHub <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
 
     </section>   
 }

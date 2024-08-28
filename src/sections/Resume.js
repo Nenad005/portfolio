@@ -28,8 +28,8 @@ function Resume(){
     if (loading) return <h1>Loading ...</h1>
     if (error) return <h1>Error ...</h1>
 
-    console.log(data.experiences.data)
-    console.log(Object.isFrozen(data.experiences.data))
+    // console.log(data.experiences.data)
+    // console.log(Object.isFrozen(data.experiences.data))
     let sortedData = [...data.experiences.data].sort((a,b) => {
         let beginingDateArrA = a.attributes.Begining.split('-')
         let dateA = new Date(`${ beginingDateArrA[0]}-${beginingDateArrA[1]}-${beginingDateArrA[2]}`)
@@ -41,7 +41,7 @@ function Resume(){
     })
 
     let monthToStr = (monthStr) => {
-        console.log(monthStr)
+        // console.log(monthStr)
         switch (parseInt(monthStr)) {
             case 1:
                 return 'JAN'
@@ -103,7 +103,7 @@ function Resume(){
                     </div>
                     <div className="py-7">
                         <p className="subtitle mb-3 group-hover:text-accent transition-all duration-300">{beginingDateStr} - {endDateStr}</p>
-                        <a href={attributes.URL ? attributes.URL : ''} target="_blank" className="title">{attributes.Title}</a>
+                        <a href={attributes.URL ? attributes.URL : ''} target="_blank" className="title hover:underline">{attributes.Title}</a>
                         <div className="subtitle flex mb-3" dangerouslySetInnerHTML={{__html: shortDescStr}}></div>
                         {attributes.Location.length > 0 && <>
                             <a className="hover:underline" href={attributes.Location[0].LocationUrl}>Location : {attributes.Location[0].LocationString}</a>

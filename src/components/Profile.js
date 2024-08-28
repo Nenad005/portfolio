@@ -23,13 +23,13 @@ function Profile(){
                 <p id="licence-text" className='text-secondary text-sm'>2024 Marko Nenadovic, All Rights Reserved</p>
             </div>
             <div id="profile-links" className='mb-10 flex gap-2'>
-                <a id="profile-link" className='group cursor-pointer' target='_blank' href='https://github.com/Nenad005'>
+                <a id="profile-link" aria-label='github-profile link' className='group cursor-pointer' target='_blank' href='https://github.com/Nenad005'>
                     <FontAwesomeIcon className='group-hover:[&>path]:fill-accent [&>path]:fill-secondary' icon={faGithub}/></a>
-                <a id="profile-link" className='group cursor-pointer' target='_blank' href='www.linkedin.com/in/marko-nenadovic-293a6125b'>
+                <a id="profile-link" aria-label='linkedin-profile link' className='group cursor-pointer' target='_blank' href='www.linkedin.com/in/marko-nenadovic-293a6125b'>
                     <FontAwesomeIcon className='group-hover:[&>path]:fill-accent [&>path]:fill-secondary' icon={faLinkedin}/></a>
-                <a id="profile-link" className='group cursor-pointer' target='_blank' href='https://www.upwork.com/freelancers/~0147c82d5c59edce57?mp_source=share'>
+                <a id="profile-link" aria-label='upwork-profile link' className='group cursor-pointer' target='_blank' href='https://www.upwork.com/freelancers/~0147c82d5c59edce57?mp_source=share'>
                     <FontAwesomeIcon className='group-hover:[&>path]:fill-accent [&>path]:fill-secondary' icon={faUpwork}/></a>
-                <a id="profile-link" className='group cursor-pointer' target='_blank' href='https://wa.me/+381654546204'>
+                <a id="profile-link" aria-label='whatup-contact link' className='group cursor-pointer' target='_blank' href='https://wa.me/+381654546204'>
                     <FontAwesomeIcon className='group-hover:[&>path]:fill-accent [&>path]:fill-secondary' icon={faWhatsapp}/></a>
             </div>
             <div id="profile-actions" className="w-[300px] flex justify-between">

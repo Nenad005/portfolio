@@ -10,9 +10,9 @@ function Contact(){
     const targetRef = useRef(null)
 
     const onSubmit = async (event) => {
-        console.log("TEST", event)
+        // console.log("TEST", event)
 
-        console.log(targetRef)
+        // console.log(targetRef)
         setResult("Sending....");
         const formData = new FormData(targetRef.current);
 
@@ -46,7 +46,7 @@ function Contact(){
         onSubmit
     })
 
-    console.log(errors)
+    // console.log(errors)
 
     return <section id="contact">
         <div id="section-icon" className="test-el"><FontAwesomeIcon icon={faEnvelope}/>CONTACT</div>
