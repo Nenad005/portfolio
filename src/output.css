@@ -727,6 +727,10 @@ input, textarea {
   padding-left: 1rem;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1336,6 +1340,10 @@ input, textarea {
   opacity: 0.2;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .brightness-75 {
   --tw-brightness: brightness(.75);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1351,6 +1359,28 @@ input, textarea {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-150 {
+  transition-delay: 150ms;
 }
 
 .duration-200 {
@@ -1407,6 +1437,10 @@ html{
   text-decoration-line: underline;
 }
 
+.group:hover .group-hover\:pointer-events-auto {
+  pointer-events: auto;
+}
+
 .group:hover .group-hover\:flex {
   display: flex;
 }
@@ -1440,6 +1474,10 @@ html{
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 @media (min-width: 768px) {

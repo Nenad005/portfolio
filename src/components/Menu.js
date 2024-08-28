@@ -10,52 +10,52 @@ function Menu(){
         <div className="fixed w-14 h-14 top-5 right-5 xl:top-10 xl:right-14 flex justify-center items-center cursor-pointer group rounded-full border-borderColor hover:border-accent border-[2px]" onClick={() => {updateShow(true)}}>
             <FontAwesomeIcon icon={faBars} className='w-[50%] h-[50%] group-hover:[&>path]:fill-accent [&>path]:fill-secondary'/>
         </div>
-        <div className="flex xl:flex fixed w-14 h-fit py-1 top-32 flex-col right-14 cursor-pointer rounded-full border-borderColor hover:border-accent border-[2px]">
+        <div className="hidden xl:flex fixed w-14 h-fit py-1 top-32 flex-col right-14 cursor-pointer rounded-full border-borderColor hover:border-accent border-[2px]">
             <a href='#introduction' aria-label='scroll to introduction section' className='group w-full aspect-square flex justify-center items-center'>
                 <FontAwesomeIcon className='[&>path]:fill-secondary group-hover:[&>path]:fill-accent group-hover:scale-125' icon={faHome}/>
-                <div className='absolute right-12 items-center hidden group-hover:flex'>
+                <div className='absolute right-12 items-center flex pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ease-in-out duration-500 delay-200 transition-opacity'>
                     <h2 className='bg-borderColor rounded-sm left-[5%] px-2'>Introduction</h2>
                     <FontAwesomeIcon icon={faPlay} className='[&>path]:fill-borderColor absolute right-[-10px]'></FontAwesomeIcon>
                 </div>
             </a>
             <a href='#about' aria-label='scroll to about section' className='group w-full aspect-square flex justify-center items-center'>
                 <FontAwesomeIcon className='[&>path]:fill-secondary group-hover:[&>path]:fill-accent group-hover:scale-125' icon={faUser}/>
-                <div className='absolute right-12 items-center hidden group-hover:flex'>
+                <div className='absolute right-12 items-center flex pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ease-in-out duration-300 delay-150 transition-opacity'>
                     <h2 className='bg-borderColor rounded-sm left-[5%] px-2'>About</h2>
                     <FontAwesomeIcon icon={faPlay} className='[&>path]:fill-borderColor absolute right-[-10px]'></FontAwesomeIcon>
                 </div>
             </a>
             <a href='#resume' aria-label='scroll to resume section' className='group w-full aspect-square flex justify-center items-center'>
                 <FontAwesomeIcon className='[&>path]:fill-secondary group-hover:[&>path]:fill-accent group-hover:scale-125' icon={faFile}/>
-                <div className='absolute right-12 items-center hidden group-hover:flex'>
+                <div className='absolute right-12 items-center flex pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ease-in-out duration-500 delay-200 transition-opacity'>
                     <h2 className='bg-borderColor rounded-sm left-[5%] px-2'>Resume</h2>
                     <FontAwesomeIcon icon={faPlay} className='[&>path]:fill-borderColor absolute right-[-10px]'></FontAwesomeIcon>
                 </div>
             </a>
             <a href='#services' aria-label='scroll to services section' className='group w-full aspect-square flex justify-center items-center'>
                 <FontAwesomeIcon className='[&>path]:fill-secondary group-hover:[&>path]:fill-accent group-hover:scale-125' icon={faGears}/>
-                <div className='absolute right-12 items-center hidden group-hover:flex'>
+                <div className='absolute right-12 items-center flex pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ease-in-out duration-500 delay-200 transition-opacity'>
                     <h2 className='bg-borderColor rounded-sm left-[5%] px-2'>Services</h2>
                     <FontAwesomeIcon icon={faPlay} className='[&>path]:fill-borderColor absolute right-[-10px]'></FontAwesomeIcon>
                 </div>
             </a>
             <a href='#skills' aria-label='scroll to skills section' className='group w-full aspect-square flex justify-center items-center'>
                 <FontAwesomeIcon className='[&>path]:fill-secondary group-hover:[&>path]:fill-accent group-hover:scale-125' icon={faShapes}/>
-                <div className='absolute right-12 items-center hidden group-hover:flex'>
+                <div className='absolute right-12 items-center flex pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ease-in-out duration-500 delay-200 transition-opacity'>
                     <h2 className='bg-borderColor rounded-sm left-[5%] px-2'>Skills</h2>
                     <FontAwesomeIcon icon={faPlay} className='[&>path]:fill-borderColor absolute right-[-10px]'></FontAwesomeIcon>
                 </div>
             </a>
             <a href='#projects' aria-label='scroll to projects section' className='group w-full aspect-square flex justify-center items-center'>
                 <FontAwesomeIcon className='[&>path]:fill-secondary group-hover:[&>path]:fill-accent group-hover:scale-125' icon={faIdCard}/>
-                <div className='absolute right-12 items-center hidden group-hover:flex'>
+                <div className='absolute right-12 items-center flex pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ease-in-out duration-500 delay-200 transition-opacity'>
                     <h2 className='bg-borderColor rounded-sm left-[5%] px-2'>Projects</h2>
                     <FontAwesomeIcon icon={faPlay} className='[&>path]:fill-borderColor absolute right-[-10px]'></FontAwesomeIcon>
                 </div>
             </a>
             <a href='#contact' aria-label='scroll to contact section' className='group w-full aspect-square flex justify-center items-center'>
                 <FontAwesomeIcon className='[&>path]:fill-secondary group-hover:[&>path]:fill-accent group-hover:scale-125' icon={faEnvelope}/>
-                <div className='absolute right-12 items-center hidden group-hover:flex'>
+                <div className='absolute right-12 items-center flex pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto ease-in-out duration-500 delay-200 transition-opacity'>
                     <h2 className='bg-borderColor rounded-sm left-[5%] px-2'>Contact</h2>
                     <FontAwesomeIcon icon={faPlay} className='[&>path]:fill-borderColor absolute right-[-10px]'></FontAwesomeIcon>
                 </div>
