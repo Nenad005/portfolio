@@ -78,7 +78,7 @@ function Projects(){
             })}
             {/* <div id="project important"></div> */}
         </div>
-        <a id="projects-github-plug" target="_blank" href="https://github.com/Nenad005" className="text-[24px] block  mt-10 cursor-pointer hover:underline text-accent mt-10">Dive deeper into my diverse projects on GitHub <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
+        <a id="projects-github-plug" target="_blank" href="https://github.com/Nenad005" className="text-[24px] block  mt-10 cursor-pointer hover:underline text-accent mt-10">Dive deeper into my diverse projects on GitHub <FontAwesomeIcon icon={faGithub} className="[&>path]:fill-primary"></FontAwesomeIcon></a>
 
     </section>   
 }

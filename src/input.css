@@ -87,3 +87,11 @@
     transition: all;
     transition-duration: 300ms;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+#homepage-sections{
+  scroll-behavior: smooth;
+}
