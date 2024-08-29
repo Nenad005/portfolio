@@ -61,10 +61,10 @@ function Projects(){
                                 src={`${backendUri}${attributes.Image.data.attributes.url}`} 
                                 alt={attributes.Image.data.attributes.alternativeText}></img>
                         {attributes.Url && <a href={attributes.Url} target="_blank" className="absolute top-[15px] left-[15px] group bg-primary px-3 py-2 rounded-xl">
-                            <FontAwesomeIcon className="[&>path]:fill-black group-hover:[&>path]:fill-accent" icon={faLink}></FontAwesomeIcon>
+                            <FontAwesomeIcon className="[&>path]:fill-black group-hover:[&>path]:fill-accent group-hover:scale-110" icon={faLink}></FontAwesomeIcon>
                         </a>}
                         {attributes.GithubUrl && <a href={attributes.GithubUrl} target="_blank" className="absolute top-[15px] right-[15px] group bg-primary px-3 py-2 rounded-xl">
-                            <FontAwesomeIcon className="[&>path]:fill-black group-hover:[&>path]:fill-accent" icon={faGithub}></FontAwesomeIcon>
+                            <FontAwesomeIcon className="[&>path]:fill-black group-hover:[&>path]:fill-accent group-hover:scale-110" icon={faGithub}></FontAwesomeIcon>
                         </a>}
                         <div className="absolute bottom-[15px] left-[15px] flex flex-wrap gap-4">
                             {technologies.map((technology, index) => {

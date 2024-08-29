@@ -101,12 +101,12 @@ function Resume(){
                         <div className="bg-secondary w-[10px] h-[10px] rounded-[50%] group-hover:bg-accent transition-all duration-300"></div>
                         <div className="bg-secondary w-[2px] h-full"></div>
                     </div>
-                    <div className="py-7">
+                    <div className="py-9">
                         <p className="subtitle mb-3 group-hover:text-accent transition-all duration-300">{beginingDateStr} - {endDateStr}</p>
-                        <a href={attributes.URL ? attributes.URL : ''} target="_blank" className="title hover:underline">{attributes.Title}</a>
-                        <div className="subtitle flex mb-3" dangerouslySetInnerHTML={{__html: shortDescStr}}></div>
+                        <a href={attributes.URL ? attributes.URL : ''} target="_blank" className="title hover:underline block mt-7">{attributes.Title}</a>
+                        <div className="subtitle flex mt-2" dangerouslySetInnerHTML={{__html: shortDescStr}}></div>
                         {attributes.Location.length > 0 && <>
-                            <a className="hover:underline" href={attributes.Location[0].LocationUrl}>Location : {attributes.Location[0].LocationString}</a>
+                            <a className="hover:underline text-sm mt-4 block" href={attributes.Location[0].LocationUrl}>Location : {attributes.Location[0].LocationString}</a>
                         </>}
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import { backendUri } from "../backendUri"
 
 const GET_DATA = gql`
     query {
-        technologies{
+        technologies(pagination: {limit: 100}){
             data{
                 attributes{
                     Name
@@ -43,7 +43,7 @@ function Skills(){
             {skills.map((skill, index) => {
                 return <div key={index} id="skill" className="flex flex-col w-fit justify-center items-center">
                     <div className="w-fit h-fit border-solid border-borderColor border-[1px] p-5 rounded-3xl">
-                        <img className="w-[70px] h-[70px]" src={`${backendUri}${skill.attributes.Image.data.attributes.url}`}
+                        <img className="object-contain w-[70px] h-[70px]" src={`${backendUri}${skill.attributes.Image.data.attributes.url}`}
                              alt={skill.attributes.Image.data.attributes.alternativeText}></img>
                     </div>
                     <h2 className="font-thin mt-2">{skill.attributes.Name}</h2>
@@ -55,7 +55,7 @@ function Skills(){
             {tools.map((tool, index) => {
                 return <div key={index} id="tool" className="flex flex-col w-fit justify-center items-center">
                     <div className="w-fit h-fit border-solid border-borderColor border-[1px] rounded-3xl p-5">
-                        <img className="w-[70px] h-[70px]" src={`${backendUri}${tool.attributes.Image.data.attributes.url}`}
+                        <img className="object-contain w-[70px] h-[70px]" src={`${backendUri}${tool.attributes.Image.data.attributes.url}`}
                              alt={tool.attributes.Image.data.attributes.alternativeText}></img>
                     </div>
                     <h2 className="font-thin mt-2">{tool.attributes.Name}</h2>
