@@ -1274,11 +1274,6 @@ input, textarea {
   padding-bottom: 1.75rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
@@ -1318,6 +1313,11 @@ input, textarea {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-secondary {
@@ -1404,6 +1404,135 @@ html{
   scroll-behavior: smooth;
 }
 
+.hide-cursor{
+  display: none;
+}
+
+.hidden1.left{
+  transform: translateX(-50%);
+}
+
+.hidden1.right{
+  transform: translateX(50%);
+}
+
+.hidden1.down{
+  transform: translateY(100px);
+}
+
+.hidden1.up{
+  transform: translateY(-100px);
+}
+
+.hidden1.blur1{
+  filter: blur(10);
+}
+
+.hidden1.zoom{
+  transform: scale(3);
+}
+
+.hidden1.zoom15{
+  transform: scale(1.5);
+}
+
+.hidden1.zoom-out{
+  transform: scale(0.1);
+}
+
+.hidden1.delay05{
+  transition-delay: 0.5s !important
+}
+
+.hidden1.delay1{
+  transition-delay: 1s !important
+}
+
+.hidden1.delay15{
+  transition-delay: 1.5s !important
+}
+
+.hidden1.delay2{
+  transition-delay: 2s !important
+}
+
+.hidden1.delay25{
+  transition-delay: 2.5s !important
+}
+
+.hidden1.delay3{
+  transition-delay: 3s !important
+}
+
+.hidden1.delay35{
+  transition-delay: 3.5s !important
+}
+
+.hidden1.delay4{
+  transition-delay: 4s !important
+}
+
+.hidden1.delay45{
+  transition-delay: 4.5s !important
+}
+
+.hidden1.delay5{
+  transition-delay: 5s !important
+}
+
+.hidden1.delay55{
+  transition-delay: 5.5s !important
+}
+
+.hidden1{
+  opacity: 0 !important;
+  transition: all 1.5s !important
+}
+
+.hidden1.duration05{
+  transition-duration: 0.5s !important
+}
+
+.hidden1.duration01{
+  transition-duration: 100ms !important
+}
+
+.hidden1.duration1{
+  transition-duration: 1s !important
+}
+
+.hidden1.duration15{
+  transition-duration: 1.5s !important
+}
+
+.hidden1.duration2{
+  transition-duration: 2s !important
+}
+
+.hidden1.duration25{
+  transition-duration: 2.5s !important
+}
+
+.hidden1.duration3{
+  transition-duration: 3s !important
+}
+
+.hidden1.duration35{
+  transition-duration: 3.5s !important
+}
+
+.hidden1.duration4{
+  transition-duration: 4s !important
+}
+
+.show{
+  filter: none !important;
+  transform: translateX(0) !important;
+  transform: translateY(0) !important;
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+
 .hover\:border-accent:hover {
   --tw-border-opacity: 1;
   border-color: rgb(40 233 140 / var(--tw-border-opacity));
@@ -1422,15 +1551,15 @@ html{
   pointer-events: auto;
 }
 
-.group:hover .group-hover\:scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:hover .group-hover\:scale-110 {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1522,6 +1651,11 @@ html{
 
   .xl\:pr-32 {
     padding-right: 8rem;
+  }
+
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 

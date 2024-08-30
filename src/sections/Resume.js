@@ -18,6 +18,7 @@ const GET_DATA = gql`
                         LocationUrl
                         LocationString
                     }
+                    __typename
                 }
             }
         }

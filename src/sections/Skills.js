@@ -7,17 +7,21 @@ const GET_DATA = gql`
     query {
         technologies(pagination: {limit: 100}){
             data{
+            id
                 attributes{
                     Name
                     tool
                     Image{
                         data{
+                            id
                             attributes{
                                 url
                                 alternativeText
+                                __typename
                             }
                         }
                     }
+                    __typename
                 }
             }
         }

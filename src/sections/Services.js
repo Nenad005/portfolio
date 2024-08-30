@@ -8,16 +8,20 @@ const GET_DATA = gql`
     query {
         specializations{
             data{
+                id
                 attributes{
                     Title
                     Description
                     Icon{
                         data{
+                            id
                             attributes{
                                 url
+                                __typename
                             }
                         }
                     }
+                    __typename
                 }
             }
         }

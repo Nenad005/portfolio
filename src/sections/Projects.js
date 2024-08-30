@@ -8,6 +8,7 @@ const GET_DATA = gql`
     query {
         projects{
             data{
+                id
                 attributes{
                     Title
                     Description
@@ -18,12 +19,15 @@ const GET_DATA = gql`
                     Url
                     Image{
                         data{
+                            id
                             attributes{
                                 url
                                 alternativeText
+                                __typename
                             }
                         }
                     }
+                    __typename
                 }
             }
         }
