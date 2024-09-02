@@ -54,7 +54,7 @@ function Projects(){
     return <section id="projects">
         <h2 id="section-icon"><FontAwesomeIcon icon={faIdCard}/>PROJECTS</h2>
         <h1 id="projects-title">Featured <span>Projects</span></h1>
-        <div id="projects-wrapper" className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-x-10 gap-y-12 max-w-[1500px]">
+        <div id="projects-wrapper" className="mt-10 mx-auto grid grid-cols-1 xl:grid-cols-2 gap-x-10 gap-y-12 max-w-[1700px]">
             {sortedData.map((project, index) => {
                 let attributes = project.attributes
                 let technologies = attributes.Technologies.split(',')

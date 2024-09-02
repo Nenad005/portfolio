@@ -10,9 +10,8 @@ function Profile(){
                                              justify-end p-5 m-[12px_12px_12px_12px] border 
                                              border-solid border-borderColor 
                                              rounded-3xl items-center">
-            <div id="title" className="mb-auto flex justify-between w-full items-end">
-                <h1 className='title text-accent'>Marko N.</h1>
-                <h1 className='subtitle text-secondary'>Developer</h1>
+            <div id="title" className="mb-auto flex justify-center w-full items-end">
+                <h1 className='title text-accent spacin tracking-widest'>Marko Nenadovic</h1>
             </div>
             <img id="profile-picture" src={profilna} alt="my picture" className="bg-white w-[200px] h-[200px] mb-10 rounded-3xl mt-10"></img>
             

@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import { basicSchema } from "../schemas";
 import { useRef } from "react";
 
-function Contact(){
+function Contact({nameRef}){
     const [result, setResult] = useState("");
     const targetRef = useRef(null)
 
@@ -58,7 +58,7 @@ function Contact(){
                         <label>FULL NAME</label>
                         {errors.fullName && touched.fullName && <p className="error">*{errors.fullName}</p>}
                     </div>
-                    <input  value={values.fullName} 
+                    <input  value={values.fullName} ref={nameRef}
                             onChange={handleChange} 
                             type="text" id="fullName" 
                             name="fullName" placeholder="your full name"
