@@ -53,7 +53,7 @@ function Services(){
     return <section id="services">
         <div id="section-icon"><FontAwesomeIcon icon={faGears}/> SERVICES</div>
         <h1 id="services-title">My <span>Services</span></h1>
-        <div id="services-wrapper" className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-3 mt-10 ">
+        <div id="services-wrapper" className="flex flex-col sm:grid sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-3 mt-10 ">
             {data.specializations.data.map((specialization, index) => {
                 let attributes = specialization.attributes 
                 return <div key={index} id="service" className="transition-all duration-300 hover:border-accent flex flex-col border-solid border-[#626262] border-[1px] rounded-3xl px-7 py-7">

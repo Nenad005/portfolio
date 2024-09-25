@@ -132,6 +132,15 @@ html{
     transform: scale(0.1);
 }
 
+.hidden1.delay01{
+  transition-delay: 0.1s !important
+}
+.hidden1.delay02{
+  transition-delay: 0.2s !important
+}
+.hidden1.delay03{
+  transition-delay: 0.3s !important
+}
 .hidden1.delay05{
     transition-delay: 0.5s !important
 }
@@ -168,7 +177,7 @@ html{
 
 .hidden1{
     opacity: 0 !important;
-    transition: all 1.5s !important
+    transition: all 0.3s !important
 }
 .hidden1.duration05{
     transition-duration: 0.5s !important
