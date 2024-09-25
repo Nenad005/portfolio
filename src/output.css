@@ -1309,6 +1309,10 @@ input, textarea {
   font-weight: 100;
 }
 
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(40 233 140 / var(--tw-text-opacity));
