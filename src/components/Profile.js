@@ -3,15 +3,42 @@ import { faCopyright } from '@fortawesome/free-regular-svg-icons'
 import { faFile, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import profilna from './../assets/profilna.jpeg'
+import {useQuery, gql} from "@apollo/client"
+
+const GET_DATA = gql`
+    query{
+        resume{
+            data{
+                attributes{
+                    PDF{
+                        data{
+                            attributes{
+                                url
+                                __typename
+                            }
+                        }
+                    }
+                    __typename
+                }
+            }
+        }
+    }
+`
 
 function Profile(){
+    const { loading, error, data } = useQuery(GET_DATA);
+    if (loading) return <h1>Loading ...</h1>
+    if (error) return <h1>Error ...</h1>
+
+    if (data) console.log(data.resume.data.attributes.PDF.data.attributes.url)
+    
     return <>
         <div id="profile-wrapper" className="flex h-100 flex-col 
                                              justify-end p-5 m-[12px_12px_12px_12px] border 
                                              border-solid border-borderColor 
                                              rounded-3xl items-center">
             <div id="title" className="mb-auto flex justify-center w-full items-end">
-                <h1 className='title text-accent spacin tracking-widest'>Marko Nenadovic</h1>
+                <h1 className='title text-accent spacin tracking-widest'>Marko Nenadović</h1>
             </div>
             <img id="profile-picture" src={profilna} alt="my picture" className="bg-white w-[200px] h-[200px] mb-10 rounded-3xl mt-10"></img>
             
@@ -19,7 +46,7 @@ function Profile(){
             <a id="profile-location" href='https://maps.app.goo.gl/Hzbu8gQrXW11kdjq7' target='_blank' className='mb-7 hover:underline'><FontAwesomeIcon icon={faLocationDot} className='mr-2'/>Based in Belgrade, Serbia</a>
             <div id="profile-licence" className='flex justify-center items-center mb-7'>
                 <FontAwesomeIcon icon={faCopyright} className='[&>*]:fill-secondary mr-2'></FontAwesomeIcon>
-                <p id="licence-text" className='text-secondary text-sm'>2024 Marko Nenadovic, All Rights Reserved</p>
+                <p id="licence-text" className='text-secondary text-sm'>2024 Marko Nenadović, All Rights Reserved</p>
             </div>
             <div id="profile-links" className='mb-10 flex gap-2'>
                 <a id="profile-link" aria-label='github-profile link' className='group cursor-pointer' target='_blank' href='https://github.com/Nenad005'>
@@ -36,7 +63,7 @@ function Profile(){
                     <FontAwesomeIcon icon={faEnvelope} className='mr-2 [&>*]:fill-black group-hover:[&>*]:fill-accent
                                                                   transition-all duration-200 ease-linear'/>
                                                                   HIRE ME</a>
-                <a id="profile-action" className='action-button group' target='_blank' href='https://vs.sveti-sava.edu.rs/uploads/Marko_Nenadovic_95dafa2d90.pdf'>
+                <a id="profile-action" className='action-button group' target='_blank' href={`https://vs.sveti-sava.edu.rs${data.resume.data.attributes.PDF.data.attributes.url}`}>
                     <FontAwesomeIcon icon={faFile} className='mr-2 [&>*]:fill-black group-hover:[&>*]:fill-accent
                                                                   transition-all duration-200 ease-linear'/>
                     RESUME</a>
